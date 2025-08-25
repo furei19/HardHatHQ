@@ -47,15 +47,8 @@ async function downloadSign() {
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
   pdf.save("safety-sign.pdf");
 
-  document.getElementById("popup_download").style.display = "block";
+  document.getElementById("downloadOverlay").style.display = "flex";
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-  const defaultSelector = document.querySelector('.selector_button[data-category="sign_template"]');
-  if (defaultSelector) {
-    defaultSelector.click();
-  }
-});
 
 document.querySelectorAll('.selector_button').forEach(button => {
   button.addEventListener('click', () => {
@@ -77,26 +70,24 @@ document.querySelectorAll('.category_selector').forEach(button => {
   button.addEventListener('click', () => {
     const selected = button.getAttribute('data-category');
 
-    document.querySelectorAll('.editor_type').forEach(editor => {
-      const ansiEditor = editor.querySelector('.ansi_editor');
-      const oshaEditor = editor.querySelector('.osha_editor');
+    const ansiEditor = document.querySelector('#sign .ansi_editor');
+    const oshaEditor = document.querySelector('#sign .osha_editor');
 
-      if (selected === 'ansi_usace') {
-        if (ansiEditor) ansiEditor.style.display = 'flex';
-        if (oshaEditor) oshaEditor.style.display = 'none';
-      } else if (selected === 'osha') {
-        if (ansiEditor) ansiEditor.style.display = 'none';
-        if (oshaEditor) oshaEditor.style.display = 'flex';
-      } else {
-        if (ansiEditor) ansiEditor.style.display = 'none';
-        if (oshaEditor) oshaEditor.style.display = 'none';
-      }
-    });
+    // Reset visibility
+    ansiEditor.style.display = 'none';
+    oshaEditor.style.display = 'none';
+
+    if (selected === 'ansi') {
+      ansiEditor.style.display = 'grid';
+    } else if (selected === 'osha' || selected === 'usace') {
+      oshaEditor.style.display = 'block';
+    }
 
     setPictogram(button);
-
   });
 });
+
+
 
 const fontSizeSlider = document.getElementById("fontSizeSlider");
 const fontSizeValue = document.getElementById("fontSizeValue");
@@ -157,6 +148,14 @@ subTextPositionSlider.addEventListener('input', () => {
   });
 });
 
-function close_popup() {
-  document.getElementById("popup_download").style.display = "none";
+function close_download_panel() {
+  document.getElementById("downloadOverlay").style.display = "none";
+}
+
+function close_img_panel() {
+  document.getElementById("imageSelectorOverlay").style.display = "none";
+}
+
+function open_img_panel() {
+  document.getElementById("imageSelectorOverlay").style.display = "flex"; // flex so it centers
 }
