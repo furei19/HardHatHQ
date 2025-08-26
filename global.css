@@ -92,64 +92,93 @@ main {
 
 /* Footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 16px;
-    box-shadow: 0 -3px 8px rgba(0,0,0,0.15);
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.15);
 }
 
-/* background patterns */
-/* Base: full-width, small-height divider */
-.brand-divider{
-  --brand: #df1f26;
+.footer_grid {
+  display: grid;
+  width: 80%;
+  gap: 40px;
+  margin: 0px auto 0px auto;
+  grid-template-columns: 40% 20% 40%;
+}
 
-  /* Generate on-brand tints/shades (modern) */
-  --brand-light: color-mix(in srgb, var(--brand) 80%, white);
-  --brand-dark:  color-mix(in srgb, var(--brand) 80%, black);
+.footer_icon_row {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 
-  /* Fallbacks for older browsers */
-  color: #fff; 
-  background-color: var(--brand);
-  height: 90px;         
+.footer_icon_row img {
+  width: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_icons {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 75%;
   width: 100%;
+  margin: 0px auto 0px auto;
 }
 
-.brand-divider.police-tape {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(0, 0, 0, 0.8) 0 30px,      /* dark semi-transparent black */
-    rgba(255, 235, 59, 0.8) 30px 60px  /* semi-transparent yellow */
-  );
+.footer_icons {
+  text-align: left;
 }
 
-/* 2) Micro dots (subtle texture) */
-.brand-divider.dots{
-  background-color: var(--brand);
-  background-image:
-    radial-gradient(var(--brand-light) 1.2px, transparent 1.2px),
-    radial-gradient(var(--brand-light) 1.2px, transparent 1.2px);
-  background-size: 8px 8px, 8px 8px;
-  background-position: 0 0, 4px 4px;
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
 }
 
-/* 3) Crosshatch grid (very subtle) */
-.brand-divider.crosshatch{
-  background-color: var(--brand);
-  background-image:
-    repeating-linear-gradient(0deg,  rgba(255,255,255,.18) 0 1px, transparent 1px 6px),
-    repeating-linear-gradient(90deg, rgba(0,0,0,.12) 0 1px, transparent 1px 6px);
+.disclaimer_section {
+  padding: 0px 20px 0px 20px;
 }
 
-/* 4) Glossy sheen (soft highlight) */
-.brand-divider.sheen{
-  background-image:
-    linear-gradient( to bottom,
-      color-mix(in srgb, var(--brand), white 22%) 0%,
-      var(--brand) 50%,
-      color-mix(in srgb, var(--brand), black 18%) 100%
-    );
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #df1f26; /* red logo color */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+#back-to-top .btn-text {
+  max-width: 0;
+  opacity: 0;
+  margin-left: 8px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+#back-to-top:hover {
+  padding: 12px 20px; /* expand horizontally */
+  border-radius: 50px;
+}
+
+#back-to-top:hover .btn-text {
+  max-width: 200px; /* enough to show text */
+  opacity: 1;
 }
 
 /* Optional: dark mode tweak if your site switches */
