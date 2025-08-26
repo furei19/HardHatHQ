@@ -27,6 +27,9 @@
                 <a href="#"><img class="icon" src="assets/navicons/cart-shopping-solid.svg" alt="Shop Icon"> Shop</a>
             </li>
             <li>
+                <a href="#"><img class="icon" src="assets/navicons/white-video-solid.svg" alt="Video Icon"> Training Videos & Posters</a>
+            </li>
+            <li>
                 <a href="#"><img class="icon" src="assets/navicons/circle-info-solid.svg" alt="About Icon"> About</a>
             </li>
             <li>
@@ -114,10 +117,25 @@
         <!-- sign builder -->
         <h1 class="divider_title">Sign Builder</h1>
 
-        <!-- image selection -->
-        <div class="image_selector_overlay" id="imageSelectorOverlay">
-            <div class="image_selector_popup">
-                <span class="close_btn" onclick="close_img_panel()">✕</span>
+        <!-- download overlay -->
+        <div class="download_overlay" id="downloadOverlay">
+            <div class="download_popup">
+                <span class="close_btn" onclick="close_download_panel()">✕</span>
+                <h2>Your download has started...</h2>
+                <p>Thank you for choosing us! 💖💖</p>
+                <p>We’re actively working on improving our website to serve you better.
+                If you have any feedback or suggestions, feel free to message us — we’d love to hear from you!</p>
+                <p>Would you like to support our work? Donations are welcome and greatly appreciated.</p>
+                <div class="download_buttons">
+                <button >Survey</button>
+                <button >Donate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- canvas -->
+        <div class="canvas">
+            <div class="image_selector">
                 <div class="left_selector_panel">
                     <p class="selector_button selected" data-category="sign_template">Sign Template</p>
                     <h3>Symbol</h3>
@@ -129,87 +147,131 @@
                     <p class="selector_button" data-category="ghs_pictogram">GHS Pictogram</p>                    
                 </div>
                 <div class="right_selector_panel">
-                    <div class="image_panel" onclick="close_img_panel()" data-category="sign_template">
-                        <div class="category_row">
-                            <p class="selector_header">OSHA</p>
-                            <p class="selector_header">ANSI</p>
-                            <p class="selector_header">USACE</p>
+                    <div class="image_panel" data-category="sign_template">
+                        <div>
+                            <p>OSHA</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
                         </div>
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/danger_ansi.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/danger_usace.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/warning_ansi.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/warning_usace.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/caution_ansi.jfif" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/caution_usace.jfif" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/safety.jfif" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/notice.jfif" alt="">
+                        <div>
+                            <p>ANSI</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/danger_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/warning_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/caution_ansi.jfif" alt="">
+                        </div>
+                        <div>
+                            <p>USACE</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/safety.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/notice.jfif" alt="">
+                        </div>
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="fire">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Fire Hose Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Telephone Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Call Point Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Blanket Location Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Break Glass Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Extinguisher Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Left Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Right Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hydrant Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Point Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Pump Connection Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/fire/Sprinkler Stop Valve Symbol.png" alt="">
+                    <div class="image_panel" data-category="fire">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Fire Hose Symbol.png" alt="">
+                            <p>Emergency Fire Hose</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Telephone Symbol.png" alt="">
+                            <p>Emergency Telephone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Call Point Symbol.png" alt="">
+                            <p>Alarm Call Point</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Symbol.png" alt="">
+                            <p>Fire Alarm Symbol</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Blanket Location Symbol.png" alt="">
+                            <p>Fire Blanket Location</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Break Glass Symbol.png" alt="">
+                            <p>Fire Break Glass</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Extinguisher Symbol.png" alt="">
+                            <p>Fire Extinguisher</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Left Symbol.png" alt="">
+                            <p>Hose <br> Left</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Right Symbol.png" alt="">
+                            <p>Hose <br> Right</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hydrant Symbol.png" alt="">
+                            <p>Fire <br> Hydrant</p>    
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Point Symbol.png" alt="">
+                            <p>FIre <br> Point</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Pump Connection Symbol.png" alt="">
+                            <p>Fire Pump Connection</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Sprinkler Stop Valve Symbol.png" alt="">
+                            <p>Sprinkler Stop Valve</p>
+                        </div>
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="hazard_identification">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Asbestos Hazard Symbol 2.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Biohazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Carbon Dioxide Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Caution Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 1.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 2.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Dangerous Drop Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol (2).png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Debris Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Objects Symbol1.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Fire Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Forklift Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Harmful Chemicals Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/High Level Noise.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Incomplete Scaffolding Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Laser Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look up of Falling Object Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look Up_Falling Object Symbol 2.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Moving Machinery Symbol 1.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/No handrails Staircase Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Pinch Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Press Machinery Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Risk of Explosion Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machine Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 3.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 4.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 5.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Symbol 5.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Social Distancing Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Suspended Load Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol 1.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Hazard Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Temp Electrical Cables.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Uneven Surfaces Symbol.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Unprotected Edge.png" alt="">
-                        <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Workers Overhead Symbol.png" alt="">
-
+                    <div class="image_panel" data-category="hazard_identification">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Asbestos Hazard Symbol 2.png" alt="">
+                            <p>Asbestos <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Biohazard Symbol.png" alt="">
+                            <p>Biohazard </p>
+                            <p> </p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Carbon Dioxide Hazard Symbol.png" alt="">
+                            <p>Carbon <br> Biohazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Caution Symbol.png" alt="">
+                            <p>Caution</p>
+                            <p> </p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 1.png" alt="">
+                            <p>Corrosion Hazard 1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 2.png" alt="">
+                            <p>Corrosion Hazard 2</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Dangerous Drop Symbol.png" alt="">
+                            <p>Dangerous <br> Drop</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol (2).png" alt="">
+                            <p>Electrical <br> Hazard 1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol.png" alt="">
+                            <p>Electrical <br> Hazard 2</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Debris Hazard Symbol.png" alt="">
+                            <p>Falling Debris Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Objects Symbol1.png" alt="">
+                            <p>Falling <br> Objects</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Fire Hazard Symbol.png" alt="">
+                            <p>Fire <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Forklift Hazard Symbol.png" alt="">
+                            <p>Forklift <br> Hazard</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Harmful Chemicals Symbol.png" alt="">
+                            <p>Harmful <br> Chemicals</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/High Level Noise.png" alt="">
+                            <p>High Level <br> Noise</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Incomplete Scaffolding Symbol.png" alt="">
+                            <p>Incomplete Scaffolding</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Laser Hazard Symbol.png" alt="">
+                            <p>Laser <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look up of Falling Object Symbol.png" alt="">
+                            <p>Look up of Falling Objects</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look Up_Falling Object Symbol 2.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Moving Machinery Symbol 1.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/No handrails Staircase Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Pinch Hazard Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Press Machinery Hazard Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Risk of Explosion Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machine Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 3.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 4.png" alt="">
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 5.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Symbol 5.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor Hazard Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Social Distancing Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Suspended Load Hazard Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol 1.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Hazard Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Temp Electrical Cables.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Uneven Surfaces Symbol.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Unprotected Edge.png" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Workers Overhead Symbol.png" alt="">
+                        </div>
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="mandatory">                            
+                    <div class="image_panel" data-category="mandatory">                            
                         <img onclick="setSymbol(this)" src="icons/Symbols/ppe/boots.jfif" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_piece.jfif" alt="">    
                         <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_protection.jfif" alt="">
@@ -230,7 +292,7 @@
                         <img onclick="setSymbol(this)" src="icons/Symbols/ppe/vest.jfif" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/ppe/visor.jfif" alt="">
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="prohibition">
+                    <div class="image_panel" data-category="prohibition">
                         <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Camera Phones Prohibited Symbol.png" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Do not Extinguish with Water Symbol.png" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Do not throw trash on toilet Symbol.png" alt="">
@@ -259,7 +321,7 @@
                         <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Not Drinking Water Symbol.png" alt="">
 
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="safe_conditions">
+                    <div class="image_panel" data-category="safe_conditions">
                         <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Assembly Point Symbol.png" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Eye Wash Symbol.png" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Hand Wash Symbol.png" alt="">
@@ -268,7 +330,7 @@
                         <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Telephone Symbol.png" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/safe/Waiting Area Symbol.png" alt="">
                     </div>
-                    <div class="image_panel" onclick="close_img_panel()" data-category="ghs_pictogram">
+                    <div class="image_panel" data-category="ghs_pictogram">
                         <img onclick="setSymbol(this)" src="icons/Symbols/flame and circle.jfif" alt="">
                         <img onclick="setSymbol(this)" src="icons/Symbols/flame.jfif" alt="">    
                         <img onclick="setSymbol(this)" src="icons/Symbols/exploding_bomb.jfif" alt="">
@@ -281,43 +343,25 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- download overlay -->
-        <div class="download_overlay" id="downloadOverlay">
-            <div class="download_popup">
-                <span class="close_btn" onclick="close_download_panel()">✕</span>
-                <h2>Your download has started...</h2>
-                <p>Thank you for choosing us! 💖💖</p>
-                <p>We’re actively working on improving our website to serve you better.
-                If you have any feedback or suggestions, feel free to message us — we’d love to hear from you!</p>
-                <p>Would you like to support our work? Donations are welcome and greatly appreciated.</p>
-                <div class="download_buttons">
-                <button >Survey</button>
-                <button >Donate</button>
+            <div id="sign">
+                <div class="editorWrapper">
+                    <img onclick="open_img_panel()" id="editorPictogram" src="icons/warning_ansi.jfif" alt="No Image Selected" />
                 </div>
-            </div>
-        </div>
+                <div class="ansi_editor">
+                    <div class="symbol_side">
+                        <img id="ansi_symbol" src="icons/Symbols/skull and crossbone.jfif" alt="No Symbol Selected">
+                    </div>
 
-        <!-- canvas -->
-        <div id="sign">
-            <div class="editorWrapper">
-                <img onclick="open_img_panel()" id="editorPictogram" src="icons/warning_ansi.jfif" alt="No Image Selected" />
-            </div>
-            <div class="ansi_editor">
-                <div class="symbol_side">
-                    <img id="ansi_symbol" src="icons/Symbols/skull and crossbone.jfif" alt="No Symbol Selected">
+                    <div class="text_side">
+                        <p class="signText">Your custom signal word</p>
+                        <p class="signTextSubtitle">Subtitle</p>    
+                    </div>
                 </div>
-
-                <div class="text_side">
+            
+                <div class="osha_editor">
                     <p class="signText">Your custom signal word</p>
-                    <p class="signTextSubtitle">Subtitle</p>    
+                    <p class="signTextSubtitle">Subtitle</p>
                 </div>
-            </div>
-        
-            <div class="osha_editor">
-                <p class="signText">Your custom signal word</p>
-                <p class="signTextSubtitle">Subtitle</p>
             </div>
         </div>
 
@@ -335,9 +379,9 @@
                     <!-- Font Size Control -->
                     <div class="font-size-control">
                         <p>
-                            Font Size: <span id="fontSizeValue">20px</span>
+                            Font Size: <span id="fontSizeValue">40px</span>
                         </p>
-                        <input type="range" class="slider" id="fontSizeSlider" min="12" max="64" value="20" step="1" />
+                        <input type="range" class="slider" id="fontSizeSlider" min="12" max="64" value="40" step="1" />
                     </div>
 
                     <!-- Text Position Control -->
@@ -357,9 +401,9 @@
                     <!-- Subtitle Font Size Control -->
                     <div class="font-size-control">
                         <p>
-                            Subtitle Font Size: <span id="subFontSizeValue">20px</span>
+                            Subtitle Font Size: <span id="subFontSizeValue">30px</span>
                         </p>
-                        <input type="range" class="slider" id="subFontSizeSlider" min="12" max="44" value="20" step="1" />
+                        <input type="range" class="slider" id="subFontSizeSlider" min="12" max="44" value="30" step="1" />
                     </div>
 
                     <!--Subtitle Text Position Control -->                    

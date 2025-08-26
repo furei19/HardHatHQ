@@ -55,7 +55,7 @@ document.querySelectorAll('.selector_button').forEach(button => {
     const selected = button.getAttribute('data-category');
 
     document.querySelectorAll('.image_panel').forEach(panel => {
-      panel.style.display = panel.getAttribute('data-category') === selected ? 'block' : 'none';
+      panel.style.display = panel.getAttribute('data-category') === selected ? 'grid' : 'none';
     });
 
     document.querySelectorAll('.selector_button').forEach(btn => {
@@ -95,7 +95,6 @@ const fontSizeValue = document.getElementById("fontSizeValue");
 fontSizeSlider.addEventListener("input", function () {
   const newSize = `${this.value}px`;
   fontSizeValue.textContent = newSize;
-
 
   document.querySelectorAll(".signText").forEach(el => {
     el.style.fontSize = newSize;
