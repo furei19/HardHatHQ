@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardHatHQ</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="homepagestyles.css">    
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar_buttons">
+            <li>
+                <a href="index.html" class="selected">
+                    <img class="icon" src="assets/navicons/house-solid.svg" alt="Home Icon"> Home
+                </a>
+            </li>
+            <li>
+                <a href="tools.html">
+                    <img class="icon" src="assets/navicons/wrench-solid.svg" alt="Tools Icon"> Tools
+                </a>
+            </li>
+            <li>
+                <a href="shop.html">
+                    <img class="icon" src="assets/navicons/cart-shopping-solid.svg" alt="Shop Icon"> Shop
+                </a>
+            </li>
+            <li>
+                <a href="training_posters.html">
+                    <img class="icon" src="assets/navicons/white-video-solid.svg" alt="Video Icon"> Training Videos & Posters
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                <img class="icon" src="assets/navicons/circle-info-solid.svg" alt="About Icon"> About
+            </a>
+            </li>
+                <li>
+                <a href="contact.html">
+                    <img class="icon" src="assets/navicons/phone-solid.svg" alt="Contact Icon"> Contact
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="assets/cover.png" alt="Banner">
+    </div>
+
+    <!-- main -->
+    <main>
+        <!-- web description -->
+
+
+        <!-- more content section-->
+        <h1 class="divider_title">Free Downloadables</h1>
+        <div class="downloads">
+            <div class="downloads__grid">
+                <div class="downloads__card">
+                    <a href="underconstruction.html">
+                        <div class="downloads__card-header">
+                            <img class="downloads__icon" src="assets/wpforms-brands-solid.svg" alt="">
+                            <h1 class="downloads__title">Forms</h1>
+                        </div>
+                        <div class="downloads__image">
+                            <img src="assets/clipboard_constructionworker.jpg" alt="">
+                        </div>
+                        <p class="downloads__description">
+                            Ready-to-use templates to streamline your documentation process. Ideal for quick data collection and standardized reporting.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="downloads__card">
+                    <a href="inspections.html">
+                        <div class="downloads__card-header">
+                            <img class="downloads__icon" src="assets/magnifying-glass-solid-full.svg" alt="">
+                            <h1 class="downloads__title">Inspection</h1>
+                        </div>
+                        <div class="downloads__image">
+                            <img src="assets/safety officer doing inspection of a construction site (1).jpg" alt="">
+                        </div>
+                        <p class="downloads__description">
+                            Professional inspection checklists for thorough evaluations. Use for safety checks, maintenance reviews, and audits.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="downloads__card">
+                    <a href="underconstruction.html">
+                        <div class="downloads__card-header">
+                            <img class="downloads__icon" src="assets/book-solid.svg" alt="">
+                            <h1 class="downloads__title">Guides</h1>
+                        </div>
+                        <div class="downloads__image">
+                            <img src="assets/guide_card.png" alt="">
+                        </div>
+                        <p class="downloads__description">
+                            Helpful guides offering instructions, best practices, and expert tips. Great for onboarding, training, or process improvement.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="downloads__card">
+                    <a href="underconstruction.html">
+                        <div class="downloads__card-header">
+                            <img class="downloads__icon" src="assets/black-video-solid.svg" alt="">
+                            <h1 class="downloads__title">Training Videos</h1>
+                        </div>
+                        <div class="downloads__image">
+                            <img src="assets/hazardcard.gif" alt="">
+                        </div>
+                        <p class="downloads__description">
+                            Videos designed to help you learn essential procedures, tools, and best practices. Ideal for onboarding, upskilling, and ongoing staff development.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- sign builder -->
+        <h1 class="divider_title">Sign Builder</h1>
+
+        <!-- download overlay -->
+        <div class="download_overlay" id="downloadOverlay">
+            <div class="download_popup">
+                <span class="close_btn" onclick="close_download_panel()">✕</span>
+                <h2>Your download has started...</h2>
+                <p>Thank you for choosing us! 💖💖</p>
+                <p>We’re actively working on improving our website to serve you better.
+                If you have any feedback or suggestions, feel free to message us — we’d love to hear from you!</p>
+                <p>Would you like to support our work? Donations are welcome and greatly appreciated.</p>
+                <div class="download_buttons">
+                <button >Survey</button>
+                <button >Donate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- canvas -->
+        <div class="canvas">
+            <div class="image_selector">
+                <div class="left_selector_panel">
+                    <p class="selector_button selected" data-category="sign_template">Sign Template</p>
+                    <h3>Symbol</h3>
+                    <p class="selector_button" data-category="fire">Fire</p>
+                    <p class="selector_button" data-category="hazard_identification">Hazard Identification</p>
+                    <p class="selector_button" data-category="mandatory">Mandatory</p>
+                    <p class="selector_button" data-category="prohibition">Prohibition</p>
+                    <p class="selector_button" data-category="safe_conditions">Safe Conditions</p>
+                    <p class="selector_button" data-category="ghs_pictogram">GHS Pictogram</p>                    
+                </div>
+                <div class="right_selector_panel">
+                    <div class="image_panel" data-category="sign_template">
+                        <div>
+                            <p>OSHA</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
+                        </div>
+                        <div>
+                            <p>ANSI</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/danger_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/warning_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi" src="icons/caution_ansi.jfif" alt="">
+                        </div>
+                        <div>
+                            <p>USACE</p>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/safety.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/notice.jfif" alt="">
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="fire">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Fire Hose Symbol.png" alt="">
+                            <p>Emergency Fire Hose</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Emergency Telephone Symbol.png" alt="">
+                            <p>Emergency Telephone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Call Point Symbol.png" alt="">
+                            <p>Alarm Call Point</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Alarm Symbol.png" alt="">
+                            <p>Fire Alarm Symbol</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Blanket Location Symbol.png" alt="">
+                            <p>Fire Blanket Location</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Break Glass Symbol.png" alt="">
+                            <p>Fire Break Glass</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Extinguisher Symbol.png" alt="">
+                            <p>Fire Extinguisher</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Left Symbol.png" alt="">
+                            <p>Hose <br> Left</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hose Right Symbol.png" alt="">
+                            <p>Hose <br> Right</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Hydrant Symbol.png" alt="">
+                            <p>Fire <br> Hydrant</p>    
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Point Symbol.png" alt="">
+                            <p>FIre <br> Point</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Fire Pump Connection Symbol.png" alt="">
+                            <p>Fire Pump Connection</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/fire/Sprinkler Stop Valve Symbol.png" alt="">
+                            <p>Sprinkler Stop Valve</p>
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="hazard_identification">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Asbestos Hazard Symbol 2.png" alt="">
+                            <p>Asbestos <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Biohazard Symbol.png" alt="">
+                            <p>Biohazard </p>
+                            <p> </p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Carbon Dioxide Hazard Symbol.png" alt="">
+                            <p>Carbon <br> Biohazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Caution Symbol.png" alt="">
+                            <p>Caution</p>
+                            <p> </p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 1.png" alt="">
+                            <p>Corrosion Hazard 1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Corrosion Hazard Symbol 2.png" alt="">
+                            <p>Corrosion Hazard 2</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Dangerous Drop Symbol.png" alt="">
+                            <p>Dangerous <br> Drop</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol (2).png" alt="">
+                            <p>Electrical <br> Hazard 1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Electrical Hazard Symbol.png" alt="">
+                            <p>Electrical <br> Hazard 2</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Debris Hazard Symbol.png" alt="">
+                            <p>Falling Debris Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Falling Objects Symbol1.png" alt="">
+                            <p>Falling <br> Objects</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Fire Hazard Symbol.png" alt="">
+                            <p>Fire <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Forklift Hazard Symbol.png" alt="">
+                            <p>Forklift <br> Hazard</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Harmful Chemicals Symbol.png" alt="">
+                            <p>Harmful <br> Chemicals</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/High Level Noise.png" alt="">
+                            <p>High Level <br> Noise</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Incomplete Scaffolding Symbol.png" alt="">
+                            <p>Incomplete Scaffolding</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Laser Hazard Symbol.png" alt="">
+                            <p>Laser <br> Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look up of Falling Object Symbol.png" alt="">
+                            <p>Look up of Falling Objects</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Look Up_Falling Object Symbol 2.png" alt="">
+                            <p>Look Up of Falling Object 1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Moving Machinery Symbol 1.png" alt="">
+                            <p>Moving Machinery</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/No handrails Staircase Symbol.png" alt="">
+                            <p>No handrails Staircase</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Pinch Hazard Symbol.png" alt="">
+                            <p>Pinch Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Press Machinery Hazard Symbol.png" alt="">
+                            <p>Press Machinery Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Risk of Explosion Symbol.png" alt="">
+                            <p>Risk of Explosion</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machine Symbol.png" alt="">
+                            <p>Rotating Machine</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 3.png" alt="">
+                            <p>Rotating Machinery Hazard<p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 4.png" alt="">
+                            <p>Rotating Machinery Hazard 1</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Machinery Hazard Symbol 5.png" alt="">
+                            <p>Rotating Machinery Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Rotating Symbol 5.png" alt="">
+                            <p>Rotating</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor Hazard Symbol.png" alt="">
+                            <p>Slippery Floor Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Slippery Floor.png" alt="">
+                            <p>Slippery Floor</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Social Distancing Symbol.png" alt="">
+                            <p>Social Distancing</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Suspended Load Hazard Symbol.png" alt="">
+                            <p>Suspended Load Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol 1.png" alt="">
+                            <p>Toxic or Poison </p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Toxic or Poison Symbol.png" alt="">
+                            <p>Toxic or Poison</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Hazard Symbol.png" alt="">
+                            <p>Tripping Hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Tripping Temp Electrical Cables.png" alt="">
+                            <p>Tripping Temp Electrical Cables</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Uneven Surfaces Symbol.png" alt="">
+                            <p>Uneven Surfaces</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Unprotected Edge.png" alt="">
+                            <p>Unprotected Edge</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/hazard/Workers Overhead Symbol.png" alt="">
+                            <p>Workers Overhead</p>
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="mandatory">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/boots.jfif" alt="">
+                            <p>boots</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_piece.jfif" alt="">   
+                            <p>ear piece</p> 
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_protection.jfif" alt="">
+                            <p>ear protection</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/earmuffs.jfif" alt="">
+                            <p>earmuffs</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/facemask.jfif" alt="">
+                            <p>facemask</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/full_protection.jfif" alt="">
+                            <p>full protectio</p>   
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/general_ppe.jfif" alt="">
+                            <p>general ppe</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/general_ppe_1.jfif" alt="">
+                            <p>general ppe1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/gloves.jfif" alt="">
+                            <p>gloves</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hardhat.jfif" alt="">
+                            <p>hardhat</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hardhat_visor.jfif" alt="">
+                            <p>hardhat visor</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/harness.jfif" alt="">
+                            <p>harness</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hazard_mask.jfif" alt="">
+                            <p>hazard mask</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hazmat.jfif" alt="">
+                            <p>hazmat</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/mask.jfif" alt="">
+                            <p>mask</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/sharp_protection.jfif" alt="">
+                            <p>sharp protection</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/suit.jfif" alt="">
+                            <p>suit</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/vest.jfif" alt="">
+                            <p>vest</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/visor.jfif" alt="">
+                            <p>visor</p>
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="prohibition">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Camera Phones Prohibited Symbol.png" alt="">
+                            <p>Camera Phones Prohibited</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Do not Extinguish with Water Symbol.png" alt="">
+                            <p>Do not Extinguish with Water</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Do not throw trash on toilet Symbol.png" alt="">
+                            <p>Do not throw trash on toilet</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Admittance Symbol.png" alt="">
+                            <p>No Admittance</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Aerosol Symbol.png" alt="">
+                            <p>No Aerosol</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Camera or Cellphone Sign.png" alt="">
+                            <p>No Camera or Cellphone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Drone Sign.png" alt="">
+                            <p>No Drone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Eating in this Area Symbol.png" alt="">
+                            <p>No Eating in this Area</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Filming Sign.png" alt="">
+                            <p>No Filming</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No fishing Symbol 1.png" alt="">
+                            <p>No fishing</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Fishing Symbol2.png" alt="">
+                            <p>No Fishing1</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Food.png" alt="">
+                            <p>No Food</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Headset Sign.png" alt="">
+                            <p>No Headset</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Ladder Symbol.png" alt="">
+                            <p>No Ladder</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Littering Sign.png" alt="">
+                            <p>No Littering</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Motorbike.png" alt="">
+                            <p>No Motorbike</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Open Flames Symbol.png" alt="">
+                            <p>No Open Flames</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Parking Sign.png" alt="">
+                            <p>No Parking</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Pedestrian Access Symbol.png" alt="">
+                            <p>No Pedestrian Access</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Photography Sign.png" alt="">
+                            <p>No Photography</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Shoes Sign.png" alt="">
+                            <p>No Shoe</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Smoking Symbol.png" alt="">
+                            <p>No Smoking</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Swimming Symbol.png" alt="">
+                            <p>No Swimming</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Vehicle Access Symbol.png" alt="">
+                            <p>No Vehilice Access</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/No Vehicle or Motorcycle.png" alt="">
+                            <p>No Vehicle or Motorcycle</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/prohibition/Not Drinking Water Symbol.png" alt="">
+                            <p>Not Drinking Water</p>
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="safe_conditions">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Assembly Point Symbol.png" alt="">
+                            <p>Emergency Assembly Point</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Eye Wash Symbol.png" alt="">
+                            <p>Emergency Eye Wash</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Hand Wash Symbol.png" alt="">
+                            <p>Emergency Hand Wash</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Shower Symbol.png" alt="">
+                            <p>Emergency Shower</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Stop Symbol.png" alt="">
+                            <p>Emergency Stop</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Emergency Telephone Symbol.png" alt="">
+                            <p>Emergency Telephone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/safe/Waiting Area Symbol.png" alt="">
+                            <p>Waiting Area</p>
+                        </div>
+                    </div>
+                    <div class="image_panel" data-category="ghs_pictogram">
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame and circle.jfif" alt="">
+                            <p>flame and circle</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame.jfif" alt="">    
+                            <p>flame</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exploding_bomb.jfif" alt="">
+                            <p>exploding bomb</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exclamation_mark.jfif" alt="">
+                            <p>exclamation mark</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/environment.jfif" alt="">
+                            <p>environment</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/corrosion.jfif" alt="">
+                            <p>corrosion</p>
+                        </div>
+                        <div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/skull and crossbone.jfif" alt="">
+                            <p>skull and crossbone</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/health_hazard.jfif" alt="">
+                            <p>health hazard</p>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/gas_cylinder.jfif" alt="">
+                            <p>gas cylinder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sign">
+                <div class="editorWrapper">
+                    <img onclick="open_img_panel()" id="editorPictogram" src="icons/warning_ansi.jfif" alt="No Image Selected" />
+                </div>
+                <div class="ansi_editor">
+                    <div class="symbol_side">
+                        <img id="ansi_symbol" src="icons/Symbols/skull and crossbone.jfif" alt="No Symbol Selected">
+                    </div>
+
+                    <div class="text_side">
+                        <p class="signText">Your custom signal word</p>
+                        <p class="signTextSubtitle">Subtitle</p>    
+                    </div>
+                </div>
+            
+                <div class="osha_editor">
+                    <p class="signText">Your custom signal word</p>
+                    <p class="signTextSubtitle">Subtitle</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas_tools">
+            <h1>Canvas Tools</h1>
+            <div class="editor_control">
+                <div class="control_column">
+                    <div class="tool_buttons">
+                        <div class="tool_button" id="replace_button" onclick="open_img_panel()">
+                            <img class="tool_icon" src="assets/clipboard-list-solid-full.svg" alt="Download">
+                            <span class="tool_text">Replace Template</span>
+                        </div>
+                    </div>
+                    <input type="text" class="input" id="inputText" placeholder="Enter Safety Message" />
+                    <!-- Font Size Control -->
+                    <div class="font-size-control">
+                        <p>
+                            Font Size: <span id="fontSizeValue">40px</span>
+                        </p>
+                        <input type="range" class="slider" id="fontSizeSlider" min="12" max="64" value="40" step="1" />
+                    </div>
+
+                    <!-- Text Position Control -->
+                    <div class="font-size-control">
+                        <p>
+                            Text Position: <span id="textPositionValue">0px</span>
+                        </p>
+                        <input type="range" class="slider" id="textPositionSlider" min="-20" max="135" value="0" step="1" />
+                    </div>
+                </div>
+                    <div class="control_column">
+                        <div class="tool_button" id="download_button" onclick="downloadSign()">
+                        <img class="tool_icon" src="assets/download-solid.svg" alt="Download">
+                        <span class="tool_text">Download as PDF</span>
+                    </div>
+                    <input type="text" class="input" id="inputTextSubtitle" placeholder="Enter Subtitle" />
+                    <!-- Subtitle Font Size Control -->
+                    <div class="font-size-control">
+                        <p>
+                            Subtitle Font Size: <span id="subFontSizeValue">30px</span>
+                        </p>
+                        <input type="range" class="slider" id="subFontSizeSlider" min="12" max="44" value="30" step="1" />
+                    </div>
+
+                    <!--Subtitle Text Position Control -->                    
+                    <div class="font-size-control">
+                        <p>
+                            Subtitle Position: <span id="subTextPositionValue">0px</span>
+                        </p>
+                        <input type="range" class="slider" id="subTextPositionSlider" min="-20" max="200" value="0" step="1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- affiliate section -->
+        <div class=" affiliate_parent">
+            <h1>Affiliate</h1>
+            <div class="affiliate_grid">
+                <div class="affiliate_icons">
+                    <img src="affiliate/mekabond.jpg" alt="">
+                    <p>Connecting Ideas. Building Futures.</p>  
+                </div>
+                <div class="affiliate_icons">
+                    <img src="affiliate/mekabond_academy.jfif" alt="">    
+                    <p>Empowering Learners. Shaping Innovators</p>
+                </div>
+                <div class="affiliate_icons">
+                    <img src="affiliate/mekabond_lab.jfif" alt="">    
+                    <p>Experiment. Innovate. Transform.</p>
+                </div>
+                <div class="affiliate_icons">
+                    <img src="affiliate/mekabond_studio.jfif" alt="">    
+                    <p>Turning Ideas into Digital Products</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p style="text-decoration: underline;">This website is currently in early release. If you encounter any bugs, please report them to [your@email.com].</p>
+        <div class="footer_grid">
+            <div class="disclaimer_section">
+                <p style="font-weight: bold;">Disclaimer:</p>
+                <p>The resources, templates, and materials provided on HARDHATHQ are intended for general guidance and educational purposes only. While every effort has been made to ensure their accuracy and relevance, these resources may not address all site-specific or regulatory requirements.</p>
+                <p>Users are responsible for reviewing, customizing, and validating all documents to meet their organization’s policies, local regulations, and project-specific needs. HARDHATHQ and its affiliates assume no liability for any loss, incident, or non-compliance resulting from the direct or indirect use of these resources.</p>
+                <p>For complex or high-risk projects, always consult with qualified safety professionals and relevant authorities.</p>
+            </div>
+            <div class="footer_icon_row">
+                <div>
+                    <p style="font-weight: bold;">Contact</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/envelope-solid.svg" alt="">
+                    <p>email</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/facebook-brands-solid.svg" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/navicons/phone-solid.svg" alt="">
+                    <p>10923012930129</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/square-linkedin-brands-solid-cropped.svg" alt="">
+                    <p>liknednin</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0828129057093!2d-122.41941508468183!3d37.774929779759616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d1d9b6c1%3A0x7e4f95d2a61b8d71!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1691180812345"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <p>© 2025 HARDHATHQ. All rights reserved.</p>
+        <div>
+            <!-- Back to Top Button -->
+            <button id="back-to-top">
+            ↑ <span class="btn-text">Back to Top</span>
+            </button>
+        </div>
+    </footer>
+
+</body>
+<script src="homepage.js"></script>
+<script src="global.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</html>

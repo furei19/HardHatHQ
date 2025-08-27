@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardHatHQ</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="metricconversion.css">  
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar_buttons">
+            <li>
+                <a href="index.html">
+                    <img class="icon" src="assets/navicons/house-solid.svg" alt="Home Icon"> Home
+                </a>
+            </li>
+            <li>
+                <a href="tools.html" class="selected">
+                    <img class="icon" src="assets/navicons/wrench-solid.svg" alt="Tools Icon"> Tools
+                </a>
+            </li>
+            <li>
+                <a href="shop.html">
+                    <img class="icon" src="assets/navicons/cart-shopping-solid.svg" alt="Shop Icon"> Shop
+                </a>
+            </li>
+            <li>
+                <a href="training_posters.html">
+                    <img class="icon" src="assets/navicons/white-video-solid.svg" alt="Video Icon"> Training Videos & Posters
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                <img class="icon" src="assets/navicons/circle-info-solid.svg" alt="About Icon"> About
+            </a>
+            </li>
+                <li>
+                <a href="contact.html">
+                    <img class="icon" src="assets/navicons/phone-solid.svg" alt="Contact Icon"> Contact
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- main -->
+    <main>
+
+        <!-- metric conversion -->
+        <h1 class="divider_title">Metric Conversion</h1>
+        <div class="converter-box">
+            <input type="number" id="value" placeholder="Enter value">
+
+            <select id="conversionType">
+                <option value="km-miles">Kilometers → Miles</option>
+                <option value="miles-km">Miles → Kilometers</option>
+                <option value="kg-lbs">Kilograms → Pounds</option>
+                <option value="lbs-kg">Pounds → Kilograms</option>
+                <option value="c-f">Celsius → Fahrenheit</option>
+                <option value="f-c">Fahrenheit → Celsius</option>
+            </select>
+
+            <button onclick="convert()">Convert</button>
+
+            <div class="result" id="result">Result will appear here</div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p style="text-decoration: underline;">This website is currently in early release. If you encounter any bugs, please report them to [your@email.com].</p>
+        <div class="footer_grid">
+            <div class="disclaimer_section">
+                <p style="font-weight: bold;">Disclaimer:</p>
+                <p>The resources, templates, and materials provided on HARDHATHQ are intended for general guidance and educational purposes only. While every effort has been made to ensure their accuracy and relevance, these resources may not address all site-specific or regulatory requirements.</p>
+                <p>Users are responsible for reviewing, customizing, and validating all documents to meet their organization’s policies, local regulations, and project-specific needs. HARDHATHQ and its affiliates assume no liability for any loss, incident, or non-compliance resulting from the direct or indirect use of these resources.</p>
+                <p>For complex or high-risk projects, always consult with qualified safety professionals and relevant authorities.</p>
+            </div>
+            <div class="footer_icon_row">
+                <div>
+                    <p style="font-weight: bold;">Contact</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/envelope-solid.svg" alt="">
+                    <p>email</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/facebook-brands-solid.svg" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/navicons/phone-solid.svg" alt="">
+                    <p>10923012930129</p>
+                </div>
+                <div class="footer_icons">
+                    <img src="assets/square-linkedin-brands-solid-cropped.svg" alt="">
+                    <p>liknednin</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0828129057093!2d-122.41941508468183!3d37.774929779759616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d1d9b6c1%3A0x7e4f95d2a61b8d71!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1691180812345"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <p>© 2025 HARDHATHQ. All rights reserved.</p>
+    </footer>
+
+</body>
+<script src="metricconversion.css"></script>
+</html>

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;       /* vertical centering */
+    justify-content: center;   /* center all items */
+    gap: 40px;                 /* more space between items */
+    background-color: #fff;
+    padding: 20px 40px;        /* bigger padding */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 70px;   /* bigger logo */
+    display: block;
+}
+
+/* Search Bar */
+.navbar .search input {
+    width: 400px;   /* wider */
+    padding: 14px 20px;  /* taller */
+    border: 2px solid #aaa;
+    border-radius: 35px;
+    font-size: 18px;  /* larger text */
+}
+
+/* Cart */
+.navbar .cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .cart img {
+    height: 45px;   /* bigger icon */
+    width: 45px;
+}
+
+.navbar .cart span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 14px;   /* larger badge text */
+    padding: 4px 8px;
+    border-radius: 50%;
+}
